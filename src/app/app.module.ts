@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     InscriptionComponent,
     NavComponent,
+    ConnexionComponent,
 
   ],
   imports: [

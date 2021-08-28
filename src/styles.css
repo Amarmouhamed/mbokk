@@ -2,3 +2,23 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Paragraphes en bleu par défaut */
+p
+{
+    color: blue;
+}
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media all and (max-width: 600px)
+{
+    .container{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+}
+.container{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}

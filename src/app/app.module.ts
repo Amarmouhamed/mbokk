@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { NavComponent } from './nav/nav.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 
 @NgModule({
@@ -10,6 +12,7 @@ import { NavComponent } from './nav/nav.component';
     AppComponent,
     InscriptionComponent,
     NavComponent,
+    ConnexionComponent,
 
   ],
   imports: [

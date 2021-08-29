@@ -10,6 +10,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { PlusInfoComponent } from './plus-info/plus-info.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
     InscriptionComponent,
     NavComponent,
     ConnexionComponent,
+    PlusInfoComponent,
 
   ],
   imports: [

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class TraitementService {
   host_connexion="http://192.168.1.9/genealogie_back";
+  utilisateur:any
   constructor(public http:HttpClient) { }
   /*
     elle lance une reque post dont les infos sont dans un formdata
@@ -22,5 +23,12 @@ export class TraitementService {
         console.log("erreur: ",err)
         erreur_callback(err)
     });
+  }
+  connecte_oui_non(){
+    if (this.utilisateur) {
+      return true
+    } else {
+      return false
+    }
   }
 }

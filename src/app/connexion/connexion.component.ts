@@ -20,7 +20,12 @@ export class ConnexionComponent implements OnInit {
       "/authentification.php",
         formData,
         (data:any)=>{
-          console.log(data)
+          if (data.status) {
+            console.log("Connexion effectuée avec succes")
+            this.traitement.utilisateur=data.personne
+          } else {
+            console.log("Login ou mot de pass incorrect")
+          }
         },
         (data:any)=>{
           console.log(data)

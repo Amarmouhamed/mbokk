@@ -15,7 +15,7 @@
             </div>
             <!-- Mon père -->
             <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                (click)="rediriger()">
+                (click)="rediriger('pere')">
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Père</div>
@@ -30,17 +30,22 @@
 
         <div class="row">
             <!-- Sœeur -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded">
+            <div (click)="rediriger('soeur')"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Sœur</div>
             </div>
             <!-- Moi -->
+<<<<<<< HEAD
             <div  class="bg-warning col-md-1 m-1 p-3 text-center rounded">
                 <div>Babacar FALL</div>
+=======
+            <div class="bg-warning col-md-1 m-1 p-3 text-center rounded">
+                <div>Babacar Fall</div>
+>>>>>>> amar
             </div>
             <!-- Frère -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded">
+            <div (click)="rediriger('frere')"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Frère</div>
@@ -56,7 +61,7 @@
                 <div class="labelPlusDeParent">Fille</div>
             </div>
             <!-- Mon Fils -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded">
+            <div (click)="rediriger('fils')"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Fils</div>
@@ -71,4 +76,8 @@
         </div>
 
     </div>
+    
+    <ul>
+        <li  *ngFor="let une_cellule of liste">{{une_cellule?.prenom+" "+une_cellule?.nom}}</li>
+    </ul>
 </div>

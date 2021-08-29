@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { NavComponent } from './nav/nav.component';
@@ -12,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AideComponent } from './aide/aide.component';
 import { AjouterParentComponent } from './ajouter-parent/ajouter-parent.component';
 import { RouterModule } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     NgbModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

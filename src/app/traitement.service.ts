@@ -6,7 +6,31 @@ import { Injectable } from '@angular/core';
 })
 export class TraitementService {
   host_connexion="http://192.168.1.9/genealogie_back";
-  liste:any=[{nom:"gvh"},{nom:"iu"},{nom:"poi"}]
+  utilisateur:any
+  liste=[
+    {prenom:"Aliou Diagne",nom:"Amar"},
+      {prenom:"Gora",nom:"Amar"},
+      {prenom:"Tala",nom:"Amar"},
+  ]
+  // liste de listes
+  arbre:any=[
+    //une generation beaucoup plus ancienne
+    [
+      {prenom:"Aliou (Baye Alla)",nom:"Amar"}
+    ],
+    //une generation plus ancienne
+    [
+      {prenom:"Aliou Diagne",nom:"Amar"},
+      {prenom:"Gora",nom:"Amar"},
+      {prenom:"Tala",nom:"Amar"},
+    ],
+    //une generation
+    [
+      {prenom:"Mouhamed",nom:"Amar"},
+      {prenom:"Modou",nom:"Amar"},
+      {prenom:"Khady",nom:"Amar"},
+    ]
+  ]
   constructor(public http:HttpClient) { }
   /*
     elle lance une reque post dont les infos sont dans un formdata
@@ -23,5 +47,12 @@ export class TraitementService {
         console.log("erreur: ",err)
         erreur_callback(err)
     });
+  }
+  connecte_oui_non(){
+    if (this.utilisateur) {
+      return true
+    } else {
+      return false
+    }
   }
 }

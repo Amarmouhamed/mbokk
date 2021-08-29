@@ -11,6 +11,8 @@ import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { AideComponent } from './aide/aide.component';
+import { AjouterParentComponent } from './ajouter-parent/ajouter-parent.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { AideComponent } from './aide/aide.component';
     NavComponent,
     ConnexionComponent,
     AideComponent,
+    AjouterParentComponent,
 
   ],
   imports: [
@@ -28,7 +31,8 @@ import { AideComponent } from './aide/aide.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

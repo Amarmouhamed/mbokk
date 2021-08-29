@@ -10,6 +10,8 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AideComponent } from './aide/aide.component';
+import { AjouterParentComponent } from './ajouter-parent/ajouter-parent.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { AideComponent } from './aide/aide.component';
     NavComponent,
     ConnexionComponent,
     AideComponent,
+    AjouterParentComponent,
 
   ],
   imports: [

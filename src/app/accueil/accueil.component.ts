@@ -26,13 +26,8 @@ export class AccueilComponent implements OnInit {
 
   }
 
-<<<<<<< HEAD
-  rediriger(type: string) {
-    this._router.navigate(['/ajouter/' + type]);
-=======
   rediriger(type:string,index_ligne:number) {
     this._router.navigate(['/ajouter/'+type+'/'+index_ligne]);
->>>>>>> amar
   }
 
 }

@@ -9,28 +9,15 @@ import { TraitementService } from '../traitement.service';
   styleUrls: ['./ajouter-parent.component.css']
 })
 export class AjouterParentComponent implements OnInit {
-<<<<<<< HEAD
-  type: string = "";
-  constructor(private _route: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    this._route.queryParams
-      .subscribe(params => {
-        console.log(params); // { orderby: "price" }
-      });
-    this.type = this._route.snapshot.params['type']
-    console.log("params: ", this._route.snapshot.params['type'])
-=======
   type:string="";
   index_ligne:number=-1;
   form_ajouter:any={}
-  constructor(private route: Router,private _route: ActivatedRoute,public traitement:TraitementService) { }
+  constructor(public route: Router,private _route: ActivatedRoute,public traitement:TraitementService) { }
 
   ngOnInit(): void {
     this.type=this._route.snapshot.params['type']
     this.index_ligne=this._route.snapshot.params['index_ligne']
     console.log("params: ",this._route.snapshot.params['type'])
->>>>>>> amar
   }
   ajouter(){
     console.log(this.form_ajouter)

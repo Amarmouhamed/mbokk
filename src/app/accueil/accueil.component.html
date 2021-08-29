@@ -27,31 +27,17 @@
 
         <div  *ngFor="let ligne of traitement.arbre; let index_ligne = index" class="row">
             <!-- Sœeur -->
-<<<<<<< HEAD
-            <div (click)="rediriger('soeur')" class="bg-light col-md-1 m-1 p-3
-                text-center rounded">
-=======
             <div (click)="rediriger('soeur',index_ligne)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
->>>>>>> amar
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Sœur</div>
             </div>
             <!-- Moi -->
-<<<<<<< HEAD
-            <div class="bg-warning col-md-1 m-1 p-3 text-center rounded">
-                <div>Babacar Fall</div>
-            </div>
-            <!-- Frère -->
-            <div (click)="rediriger('frere')" class="bg-light col-md-1 m-1 p-3
-                text-center rounded">
-=======
             <div *ngFor="let une_cellule of ligne" class="bg-warning col-md-1 m-1 p-3 text-center rounded">
                 <div>{{une_cellule.prenom+" "+une_cellule.nom}}</div>
             </div>
             <!-- Frère -->
             <div (click)="rediriger('frere',index_ligne)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
->>>>>>> amar
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Frère</div>
@@ -67,12 +53,7 @@
                 <div class="labelPlusDeParent">Fille</div>
             </div>
             <!-- Mon Fils -->
-<<<<<<< HEAD
-            <div (click)="rediriger('fils')" class="bg-light col-md-1 m-1 p-3
-                text-center rounded">
-=======
             <div (click)="rediriger('fils',-1)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
->>>>>>> amar
                 <div></div>
                 <i class="fas fa-plus-circle"></i>
                 <div class="labelPlusDeParent">Fils</div>

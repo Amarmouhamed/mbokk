@@ -14,6 +14,7 @@ import { AideComponent } from './aide/aide.component';
 import { AjouterParentComponent } from './ajouter-parent/ajouter-parent.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     ConnexionComponent,
     AideComponent,
     AjouterParentComponent,
+    AccueilComponent
 
   ],
   imports: [

@@ -4,6 +4,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AideComponent } from './aide/aide.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { PlusInfoComponent } from './plus-info/plus-info.component';
 
 
 const routes: Routes = [

@@ -9,17 +9,17 @@
                 <h1>Ajouter un(e) {{type}}</h1>
                 <div class="form-group mt-5">
                     <input class="form-control" type="text"
-                        placeholder="Prenom">
+                        placeholder="Prenom" name="prenom"  [(ngModel)]="form_ajouter.prenom">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Nom">
+                        placeholder="Nom"  [(ngModel)]="form_ajouter.nom">
                 </div>
 
                 <!-- The action Button-->
                 <div class="form-group mt-5">
                     <button class="btn btn-primary
-                        btn-block">Ajouter</button>
+                        btn-block" (click)="ajouter()">Ajouter</button>
                 </div>
             </div>
         </div></div>

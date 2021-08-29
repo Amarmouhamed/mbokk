@@ -28,7 +28,7 @@ const routes: Routes = [
     path: "plus-infos", component: PlusInfoComponent,
   },
   {
-    path: "ajouter/:type", component: AjouterParentComponent,
+    path: "ajouter/:type/:index_ligne", component: AjouterParentComponent,
   },
   {
     path: "", component: AccueilComponent,

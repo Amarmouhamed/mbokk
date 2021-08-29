@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class TraitementService {
   host_connexion="http://192.168.1.9/genealogie_back";
+  liste:any=[{nom:"gvh"},{nom:"iu"},{nom:"poi"}]
   constructor(public http:HttpClient) { }
   /*
     elle lance une reque post dont les infos sont dans un formdata

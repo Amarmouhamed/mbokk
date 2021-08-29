@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { TraitementService } from '../traitement.service';
 
 @Component({
   selector: 'app-accueil',
@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AccueilComponent implements OnInit {
 
-  constructor(private _router: Router) { }
+  constructor(public traitement:TraitementService) { }
 
   ngOnInit(): void {
   }
 
   rediriger() {
-    this._router.navigate(['/ajouter', { type: 'pere' }]);
+    // this._router.navigate(['/ajouter', { type: 'pere' }]);
   }
 
 }

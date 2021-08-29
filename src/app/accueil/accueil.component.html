@@ -1,6 +1,8 @@
 <div class="container-fluid bg-dark p-5">
     <h3 class="fw-bold" style="color: white;">Mon arbre</h3>
-
+    <ul>
+        <li  *ngFor="let une_cellule of traitement.liste">{{une_cellule.nom}}</li>
+    </ul>
     <div class="_arbre">
 
         <div class="row">
@@ -34,7 +36,7 @@
                 <div class="labelPlusDeParent">Sœur</div>
             </div>
             <!-- Moi -->
-            <div class="bg-warning col-md-1 m-1 p-3 text-center rounded">
+            <div  class="bg-warning col-md-1 m-1 p-3 text-center rounded">
                 <div>Babacar FALL</div>
             </div>
             <!-- Frère -->

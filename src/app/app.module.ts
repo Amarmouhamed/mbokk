@@ -14,6 +14,7 @@ import { AideComponent } from './aide/aide.component';
 import { AjouterParentComponent } from './ajouter-parent/ajouter-parent.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { CommonModule } from '@angular/common';
     ConnexionComponent,
     AideComponent,
     AjouterParentComponent,
-
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

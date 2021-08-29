@@ -1,82 +1,140 @@
-<div class="container-fluid bg-dark p-5">
-    <h3 class="fw-bold" style="color: white;">Mon arbre</h3>
-    <ul>
-        <li *ngFor="let une_cellule of traitement.liste">{{une_cellule.nom}}</li>
-    </ul>
-    <div class="_arbre">
+<div class="row container-fluid m-0 p-0">
+    <div class="col-md-6 p-5">
+        <h1>Mbokk</h1>
+        <p style="color: black;">Notre site permet de retracer l’arbre
+            généalogique du monde
+            entier avec un
+            principe simple : tout utilisateur qui s’inscrit va éditer
+            lui-même l’arbre.
+            Pour ce faire, il devra une fois inscrite :
+            -Enregistrer avec plus de précisions, les différents membres de
+            sa famille
+            en commençant par ses frères et soeurs, puis ajouter ses parents
+            respectifs
+            ( père et mère) en renseignant si possible les frères et soeurs
+            de ses
+            derniers, et ensuite remonter sur les grands parents et autres
+            tout en
+            respectant la hiérarchie qui a été définie.</p>
 
-        <div class="row">
-            <!-- Frère de mon pére -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Tante</div>
-            </div>
-            <!-- Mon père -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                (click)="rediriger('pere')">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Père</div>
-            </div>
-            <!-- Frère de mon pére -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Oncle</div>
-            </div>
+        <div class="mt-5 col-md-5 rounded">
+            <button class="btn btn-primary
+                btn-block">Améliorer mon arbre</button>
         </div>
-
-        <div class="row">
-            <!-- Sœeur -->
-            <div (click)="rediriger('soeur')" class="bg-light col-md-1 m-1 p-3
-                text-center rounded">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Sœur</div>
-            </div>
-            <!-- Moi -->
-            <div class="bg-warning col-md-1 m-1 p-3 text-center rounded">
-                <div>Babacar Fall</div>
-            </div>
-            <!-- Frère -->
-            <div (click)="rediriger('frere')" class="bg-light col-md-1 m-1 p-3
-                text-center rounded">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Frère</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Filles -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Fille</div>
-            </div>
-            <!-- Mon Fils -->
-            <div (click)="rediriger('fils')" class="bg-light col-md-1 m-1 p-3
-                text-center rounded">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Fils</div>
-            </div>
-            <!-- Mon Fils -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Fils</div>
-            </div>
-        </div>
-
     </div>
 
-    <ul>
-        <li *ngFor="let une_cellule of liste">{{une_cellule?.prenom+"
-            "+une_cellule?.nom}}</li>
-    </ul>
-</div>
+
+    <div class="col-md-6">
+        <img class="img-fluid m-auto"
+            src="assets/ill.png" alt="Logo">
+    </div>
+
+    <div class="container-fluid bg-light p-5">
+
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <!-- <i class="fas fa-search fa-3"></i> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro qui optio aperiam tempore similique quo est ex
+                    pariatur animi cumque, natus ea. Doloribus sequi impedit
+                    quibusdam in autem itaque nam?</p>
+            </div>
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro qui optio aperiam tempore similique quo est ex
+                    pariatur animi cumque, natus ea. Doloribus sequi impedit
+                    quibusdam in autem itaque nam?</p>
+            </div>
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro qui optio aperiam tempore similique quo est ex
+                    pariatur animi cumque, natus ea. Doloribus sequi impedit
+                    quibusdam in autem itaque nam?</p>
+            </div>
+        </div>
+
+
+        <h3 class="fw-bold" style="color: white;">Mon arbre</h3>
+        <ul>
+            <li *ngFor="let une_cellule of traitement.liste">{{une_cellule.nom}}</li>
+        </ul>
+        <div class="_arbre">
+
+            <div class="row">
+                <!-- Frère de mon pére -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Tante</div>
+                </div>
+                <!-- Mon père -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    (click)="rediriger('pere')">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Père</div>
+                </div>
+                <!-- Frère de mon pére -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Oncle</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Sœeur -->
+                <div (click)="rediriger('soeur')" class="bg-light col-md-1 m-1
+                    p-3
+                    text-center rounded">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Sœur</div>
+                </div>
+                <!-- Moi -->
+                <div class="bg-warning col-md-1 m-1 p-3 text-center rounded">
+                    <div>Babacar Fall</div>
+                </div>
+                <!-- Frère -->
+                <div (click)="rediriger('frere')" class="bg-light col-md-1 m-1
+                    p-3
+                    text-center rounded">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Frère</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Filles -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Fille</div>
+                </div>
+                <!-- Mon Fils -->
+                <div (click)="rediriger('fils')" class="bg-light col-md-1 m-1
+                    p-3
+                    text-center rounded">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Fils</div>
+                </div>
+                <!-- Mon Fils -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Fils</div>
+                </div>
+            </div>
+
+        </div>
+
+        <ul>
+            <li *ngFor="let une_cellule of liste">{{une_cellule?.prenom+"
+                "+une_cellule?.nom}}</li>
+        </ul>
+    </div>

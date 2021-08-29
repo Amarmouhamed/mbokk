@@ -9,48 +9,48 @@
                 <h1>Inscription</h1>
                 <div class="form-group mt-5">
                     <input class="form-control" type="text"
-                        placeholder="Prenom">
+                        placeholder="Prenom" [(ngModel)]="form_inscription.prenom">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Nom">
+                        placeholder="Nom" [(ngModel)]="form_inscription.nom">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Login">
+                        placeholder="Login"  [(ngModel)]="form_inscription.login">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Mot de passe">
+                        placeholder="Mot de passe"  [(ngModel)]="form_inscription.mdp">
                 </div>
                 <div class="row">
                     <div class="form-group col-md-7">
                         <input class="form-control" type="Date"
-                            placeholder="Date de naissance">
+                            placeholder="Date de naissance"  [(ngModel)]="form_inscription.date_naissance">
                     </div>
                     <div class="form-group col-md-5">
                         <input class="form-control" type="text"
-                            placeholder="Téléphone">
+                            placeholder="Téléphone"  [(ngModel)]="form_inscription.telephone">
                     </div>
                 </div>
                 <!-- Sexe -->
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio"
                         name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
+                        value="M"  [(ngModel)]="form_inscription.sexe">
                     <label class="form-check-label" for="inlineRadio1">Homme</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio"
                         name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
+                        value="F" [(ngModel)]="form_inscription.sexe">
                     <label class="form-check-label" for="inlineRadio2">Femme</label>
                 </div>
                 <!-- The action Button-->
 
                 <div class="form-group mt-5">
                     <button class="btn btn-primary
-                        btn-block">Inscription</button>
+                        btn-block" (click)="inscrire()">Inscription</button>
                 </div>
             </div>
         </div></div>

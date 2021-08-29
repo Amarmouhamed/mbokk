@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TraitementService {
-  host_connexion="http://192.168.1.9/genealogie_back/inscription.php";
+  host_connexion="http://192.168.1.9/genealogie_back";
   constructor(public http:HttpClient) { }
   /*
     elle lance une reque post dont les infos sont dans un formdata
@@ -13,8 +13,8 @@ export class TraitementService {
         succes_callback en cas de succes
         erreur_callback en cas de succes
   */
-  lancer_requete_post(formData:any,succes_callback:Function,erreur_callback:Function){
-    this.http.post(this.host_connexion,formData)
+  lancer_requete_post(page:string,formData:any,succes_callback:Function,erreur_callback:Function){
+    this.http.post(this.host_connexion+page,formData)
     .subscribe((res:any) => {
          console.log("succes: ", res)
           succes_callback(res)

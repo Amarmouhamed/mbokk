@@ -1,4 +1,4 @@
-<div class="loginbox d-flex">
+<div class="loginbox d-flex container-fluid">
     <div class="row">
         <div class="login-left bg-warning col-md-5">
             <img class="img-fluid m-auto"
@@ -9,41 +9,41 @@
                 <h1>Inscription</h1>
                 <div class="form-group mt-5">
                     <input class="form-control" type="text"
-                        placeholder="Prenom" [(ngModel)]="form_inscription.PRENOM">
+                        placeholder="Prenom" [(ngModel)]="form_inscription.prenom">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Nom" [(ngModel)]="form_inscription.NOM">
+                        placeholder="Nom" [(ngModel)]="form_inscription.nom">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Login"  [(ngModel)]="form_inscription.LOGIN">
+                        placeholder="Login"  [(ngModel)]="form_inscription.login">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text"
-                        placeholder="Mot de passe"  [(ngModel)]="form_inscription.MDP">
+                        placeholder="Mot de passe"  [(ngModel)]="form_inscription.mdp">
                 </div>
                 <div class="row">
                     <div class="form-group col-md-7">
                         <input class="form-control" type="Date"
-                            placeholder="Date de naissance"  [(ngModel)]="form_inscription.DATE_NAISSANCE">
+                            placeholder="Date de naissance"  [(ngModel)]="form_inscription.date_naissance">
                     </div>
                     <div class="form-group col-md-5">
                         <input class="form-control" type="text"
-                            placeholder="Téléphone"  [(ngModel)]="form_inscription.TELEPHONE">
+                            placeholder="Téléphone"  [(ngModel)]="form_inscription.telephone">
                     </div>
                 </div>
                 <!-- Sexe -->
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio"
                         name="inlineRadioOptions" id="inlineRadio1"
-                        value="M"  [(ngModel)]="form_inscription.SEXE">
+                        value="M"  [(ngModel)]="form_inscription.sexe">
                     <label class="form-check-label" for="inlineRadio1">Homme</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio"
                         name="inlineRadioOptions" id="inlineRadio2"
-                        value="F" [(ngModel)]="form_inscription.SEXE">
+                        value="F" [(ngModel)]="form_inscription.sexe">
                     <label class="form-check-label" for="inlineRadio2">Femme</label>
                 </div>
                 <!-- The action Button-->

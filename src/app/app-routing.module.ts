@@ -22,6 +22,9 @@ const routes: Routes = [
     path: "aide", component: AideComponent,
   },
   {
+    path: "plus-infos", component: PlusInfoComponent,
+  },
+  {
     path: "", component: AccueilComponent,
 
   }

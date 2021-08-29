@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AideComponent } from './aide/aide.component';
@@ -26,7 +28,7 @@ const routes: Routes = [
     path: "plus-infos", component: PlusInfoComponent,
   },
   {
-    path: "ajouter", component: AjouterParentComponent,
+    path: "ajouter/:type", component: AjouterParentComponent,
   },
   {
     path: "", component: AccueilComponent,
@@ -35,7 +37,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+    CommonModule,],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

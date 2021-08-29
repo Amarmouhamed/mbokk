@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TraitementService } from '../traitement.service';
 
 @Component({
   selector: 'app-aide',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aide.component.css']
 })
 export class AideComponent implements OnInit {
-
-  constructor() { }
+  liste:any=["gvh","iu","poi"]
+  constructor(public traitement:TraitementService) { }
 
   ngOnInit(): void {
   }

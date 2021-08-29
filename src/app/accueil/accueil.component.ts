@@ -9,15 +9,25 @@ import { TraitementService } from '../traitement.service';
 })
 export class AccueilComponent implements OnInit {
 
+
+  liste: any;
   constructor(private _router: Router, public traitement: TraitementService) {
     this.traitement.currentPage = true;
+
   }
 
   ngOnInit(): void {
+    console.log(this.traitement.arbre)
+    this.liste = [
+      { prenom: "Aliou Diagne", nom: "Amar" },
+      { prenom: "Gora", nom: "Amar" },
+      { prenom: "Tala", nom: "Amar" },
+    ]
+
   }
 
-  rediriger() {
-    this._router.navigate(['/ajouter', { type: 'pere' }]);
+  rediriger(type: string) {
+    this._router.navigate(['/ajouter/' + type]);
   }
 
 }

@@ -5,6 +5,10 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +20,12 @@ import { ConnexionComponent } from './connexion/connexion.component';
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

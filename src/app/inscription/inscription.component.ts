@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TraitementService } from '../traitement.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { TraitementService } from '../traitement.service';
 })
 export class InscriptionComponent implements OnInit {
   form_inscription:any={}
-  constructor(public traitement:TraitementService) { }
+  constructor(public traitement:TraitementService,public route:Router) { }
 
   ngOnInit(): void {
   }
@@ -20,10 +21,10 @@ export class InscriptionComponent implements OnInit {
       "/inscription.php",
         formData,
         (data:any)=>{
-          console.log(data)
+          // this.traitement.utilisateur=data.personne
+          this.route.navigate(['/connexion'])
         },
         (data:any)=>{
-          console.log(data)
         }
     );
   }

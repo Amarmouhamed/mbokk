@@ -30,7 +30,39 @@ export class AjouterParentComponent implements OnInit {
     } else {
       this.traitement.arbre[this.index_ligne].unshift(this.form_ajouter)
     }
-    
     this.route.navigate(['/'])
+    if(this.traitement.connecte_oui_non()){
+      /*let formData = new FormData();
+      formData.append('id_personne',this.traitement.utilisateur.idpersonne);
+      formData.append('form_ajouter',JSON.stringify(this.form_ajouter));
+      this.traitement.lancer_requete_post(
+        "/ajoutmembre.php",
+          formData,
+          (data:any)=>{
+            if (data.status) {
+              console.log("Ajout effectuée avec succes")
+              console.log(this.form_ajouter)
+              if (this.index_ligne==-1) {
+                this.traitement.arbre.push([this.form_ajouter])
+              } else if (this.index_ligne==-2) {
+                this.traitement.arbre.unshift([this.form_ajouter])
+              } else if (this.type=="frere") {
+                this.traitement.arbre[this.index_ligne].push(this.form_ajouter)
+              } else {
+                this.traitement.arbre[this.index_ligne].unshift(this.form_ajouter)
+              }
+              this.route.navigate(['/'])
+            } else {
+              console.log("Erreur d'ajout")
+            }
+          },
+          (data:any)=>{
+            console.log(data)
+          }
+      );*/
+    }else{
+      console.log("Erreur de connexion")
+    }
+    
   }
 }

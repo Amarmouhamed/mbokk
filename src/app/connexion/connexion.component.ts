@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TraitementService } from '../traitement.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { TraitementService } from '../traitement.service';
 })
 export class ConnexionComponent implements OnInit {
   form_connexion:any={}
-  constructor(public traitement:TraitementService) { }
+  constructor(public traitement:TraitementService,private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +24,7 @@ export class ConnexionComponent implements OnInit {
           if (data.status) {
             console.log("Connexion effectuée avec succes")
             this.traitement.utilisateur=data.personne
+            this.route.navigate(['/'])
           } else {
             console.log("Login ou mot de pass incorrect")
           }

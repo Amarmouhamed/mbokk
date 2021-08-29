@@ -1,75 +1,80 @@
 <div class="container-fluid bg-dark p-5">
     <h3 class="fw-bold" style="color: white;">Mon arbre</h3>
-    <div class="_arbre">
+    <div class="_container_arbre">
+        
+    <div class="_arbre " >
 
-        <div class="row">
-            <!-- Frère de mon pére -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Tante</div>
+            <div class="row">
+                <!-- Frère de mon pére -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Tante</div>
+                </div>
+                <!-- Mon père -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    (click)="rediriger('pere',-2)">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Père</div>
+                </div>
+                <!-- Frère de mon pére -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Oncle</div>
+                </div>
             </div>
-            <!-- Mon père -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                (click)="rediriger('pere',-2)">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Père</div>
+
+            <div class=" row" *ngFor="let ligne of traitement.arbre; let index_ligne = index" >
+                <!-- Sœeur -->
+                <div (click)="rediriger('soeur',index_ligne)"  class="_arbre bg-light col-md-1 m-1 p-3 text-center rounded">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Sœur</div>
+                </div>
+                <!-- Moi -->
+                <div *ngFor="let une_cellule of ligne" class="_arbre bg-warning col-md-1 m-1 p-3 text-center rounded">
+                    <div>{{une_cellule.prenom+" "+une_cellule.nom}}</div>
+                </div>
+                <!-- Frère -->
+                <div (click)="rediriger('frere',index_ligne)"  class="_arbre bg-light col-md-1 m-1 p-3 text-center rounded">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Frère</div>
+                </div>
             </div>
-            <!-- Frère de mon pére -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Oncle</div>
+
+            <div class="row">
+                <!-- Filles -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Fille</div>
+                </div>
+                <!-- Mon Fils -->
+                <div (click)="rediriger('fils',-1)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Fils</div>
+                </div>
+                <!-- Mon Fils -->
+                <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
+                    style="opacity: 0;">
+                    <div></div>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="labelPlusDeParent">Fils</div>
+                </div>
             </div>
+
         </div>
-
-        <div  *ngFor="let ligne of traitement.arbre; let index_ligne = index" class="row">
-            <!-- Sœeur -->
-            <div (click)="rediriger('soeur',index_ligne)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Sœur</div>
-            </div>
-            <!-- Moi -->
-            <div *ngFor="let une_cellule of ligne" class="bg-warning col-md-1 m-1 p-3 text-center rounded">
-                <div>{{une_cellule.prenom+" "+une_cellule.nom}}</div>
-            </div>
-            <!-- Frère -->
-            <div (click)="rediriger('frere',index_ligne)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Frère</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Filles -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Fille</div>
-            </div>
-            <!-- Mon Fils -->
-            <div (click)="rediriger('fils',-1)"  class="bg-light col-md-1 m-1 p-3 text-center rounded">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Fils</div>
-            </div>
-            <!-- Mon Fils -->
-            <div class="bg-light col-md-1 m-1 p-3 text-center rounded"
-                style="opacity: 0;">
-                <div></div>
-                <i class="fas fa-plus-circle"></i>
-                <div class="labelPlusDeParent">Fils</div>
-            </div>
-        </div>
-
-    </div>
+    </div> 
     
     <ul>
         <li  *ngFor="let une_cellule of liste">{{une_cellule?.prenom+" "+une_cellule?.nom}}</li>
     </ul>
 </div>
+
+<script src="./assets/script.js"></script>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TraitementService } from '../traitement.service';
 
 @Component({
   selector: 'app-accueil',
@@ -8,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class AccueilComponent implements OnInit {
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, public traitement: TraitementService) {
+    this.traitement.currentPage = true;
+  }
 
   ngOnInit(): void {
   }

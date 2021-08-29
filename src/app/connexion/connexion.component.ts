@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TraitementService } from '../traitement.service';
 
 @Component({
   selector: 'app-connexion',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public traitement: TraitementService) {
+    this.traitement.currentPage = false
+  }
 
   ngOnInit(): void {
   }
 
 }
+

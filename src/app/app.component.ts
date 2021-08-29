@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TraitementService } from './traitement.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(public traitement: TraitementService) {
+    this.traitement.currentPage = true
+  }
+
   title = 'mbokk';
 }

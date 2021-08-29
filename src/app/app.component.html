@@ -1,2 +1,5 @@
-<app-nav></app-nav>
+<div *ngIf="traitement.currentPage; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock><app-nav></app-nav></ng-template>
+<ng-template #elseBlock></ng-template>
+
 <router-outlet></router-outlet>

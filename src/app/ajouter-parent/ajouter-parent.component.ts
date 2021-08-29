@@ -15,7 +15,6 @@ export class AjouterParentComponent implements OnInit {
       .subscribe(params => {
         console.log(params); // { orderby: "price" }
       });
-
   }
 
 }
